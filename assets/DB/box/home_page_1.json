@@ -1,0 +1,22 @@
+{
+  "id4": "box04",
+   "image_url":"assets/images/beg4.jpg",
+   "text":"Donate For Foundation -Flood Relief/Water Crisis/Dengue Infection- And Many Others.",
+   "box":[
+       {
+           "tital":"Served Over",
+           "text1":"1,832,805",
+           "text2":"People in Bangladesh"
+       },
+       {
+           "tital":"Donate Zakat",
+           "text1":"Zakat is a religious obligation for all Muslims who meet the necessary criteria to donate a certain portion of their wealth each year to charitable causes",
+           "text2":"Donate Now"
+       },
+       {
+           "tital":"Become a Part",
+           "text1":"Become a Part of our Foundation and Help to Serve Others.",
+           "text2":"Become a Part"
+       }
+   ]
+}

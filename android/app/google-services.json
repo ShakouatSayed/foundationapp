@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "281946284895",
+    "project_id": "foundationapp-92fe3",
+    "storage_bucket": "foundationapp-92fe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281946284895:android:febc122d8056527c6c4cea",
+        "android_client_info": {
+          "package_name": "com.example.foundationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281946284895-o5c0jsvl9oe8nanginq7krjo06vi8f7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2Xar8fpVcP2myGDKeXCpE0IMFjnK8gJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281946284895-o5c0jsvl9oe8nanginq7krjo06vi8f7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281946284895-nm73efen0bt4042it8ctijrt7bpn3nde.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foundationapp.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

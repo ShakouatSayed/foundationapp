@@ -1,0 +1,42 @@
+{
+    "id1": "box02",
+   "main_image_url":"assets/images/beg2.jpg",
+   "main_tital":"Blog",
+   "box":[
+       {
+           "image_url":"",
+           "date":"26 July 2022 - August 2022",
+           "sm_text":"Flood In Bangladesh",
+           "tital":"Flood and Moonsoon Rain In Bangladesh",
+           "text":"Giving foods for the people's and children which are affected by flood in Bangladesh"
+       },
+       {
+           "image_url":"",
+           "date":"08 July 2022",
+           "sm_text":"Poverty",
+           "tital":"Poverty",
+           "text":"Giving Clothes to people's which are affected by poverty"
+       },
+       {
+           "image_url":"",
+           "date":"26 April 2015",
+           "sm_text":"Tornado",
+           "tital":"Tornado In Bangladesh",
+           "text":"Severe storm hit areas of Cox's Bazar Chittagong, Bangladesh on the night of April 26, 2015. It caused considerable damage in the cities of Chakaria and Cox'sBazar and We serve in this Situation too"
+       },
+       {
+           "image_url":"",
+           "date":"14 May 2014",
+           "sm_text":"Droght",
+           "tital":"Droght in Bangladesh 2014",
+           "text":"The drought was at its peak in Chakaria and Cox'sBazar, 26 districts of Bangladesh were suffering from severe famine as a result of the drought. 1 million people in the province were affected by the great drought And We Also Serve in this Situation to aware people to save water"
+       },
+       {
+           "image_url":"",
+           "date":"1 March 2019",
+           "sm_text":"Corona",
+           "tital":"Corona in Bangladesh",
+           "text":"When the first case is report in Bangladesh of covid-19 it a very sad news and then people are restricted to out and enjoy happy life"
+       }
+   ]
+}

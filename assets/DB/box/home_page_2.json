@@ -1,0 +1,49 @@
+{
+    "id5": "box05",
+   "main_tital":"OUR EVENSTS",
+   "text":"Flood Relief / Food Security including nutrition for children and lactating mothers / Shelter and Tents / Health Support / Livestock support including vaccination / Water and sanitation.",
+   "box":[
+       {
+           "image_url":" ",
+           "tital":"Clean water for Flood Affected People",
+           "text":"Clean Water is our first priority for Flood Affected People's and for their Children's and Cattles",
+           "sm_text":"Last donation 3w ago",
+           "raised":"$780 raised of $1,984"
+       },
+       {
+           "image_url":" ",
+           "tital":"Foods and Security",
+           "text":"Food is th basic need For people and we need Security for their cattles and nutrition is very good for their children's",
+           "sm_text":"Last donation 2w ago",
+           "raised":"$680 raised of $1,421"
+       },
+       {
+           "image_url":" ",
+           "tital":"Ready made Clothing for People And Children",
+           "text":"We need ready make cloths for flood affected people's and for their children's",
+           "sm_text":"Last donation 1w ago",
+           "raised":"$580 raised of $1,921"
+       },
+       {
+           "image_url":" ",
+           "tital":"Health Support for People's and their Livestock",
+           "text":"For the Health Support we need Vaccines And Other Medicines And Doctors For giving them best Health Support",
+           "sm_text":"Last donation 4w ago",
+           "raised":"$780 raised of $1,751"
+       },
+       {
+           "image_url":" ",
+           "tital":"Anti Dengue Mosquito Nets And Spray",
+           "text":"Dengue is also so much spreading and infected so much people in Bangladesh We need Nets And Spray For Killing this Mosquito",
+           "sm_text":"Last donation 2w ago",
+           "raised":"$920 raised of $1,159"
+       },
+       {
+           "image_url":" ",
+           "tital":"Tents and Shelters",
+           "text":"We need Tents and Shelter For Flood affected people and many other people's which are going from other crisis",
+           "sm_text":"Last donation 3w ago",
+           "raised":"$720 raised of $2,511"
+       }
+   ]
+}

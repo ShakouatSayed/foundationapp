@@ -1,0 +1,12 @@
+{
+    "id0": "box01",
+    "main_image_url":"assets/images/beg1.jpg",
+    "text":"About Us",
+    "box":[
+        {
+            "sub_image_url":"assets/images/beg2.jpg",
+            "tital":"Welcome to Panchakanya Foundation",
+            "text1":"This Foundation is established in 2021 and and working very"
+        }
+    ]
+}
