@@ -3,7 +3,7 @@ class HomeBox3Model {
   String? imageUrl;
   List<Box>? box;
 
-  HomeBox3Model({ this.id6, this.imageUrl, this.box});
+  HomeBox3Model({this.id6, this.imageUrl, this.box});
 
   HomeBox3Model.fromJson(Map<String, dynamic> json)
       : id6 = json['id6'],
@@ -32,7 +32,14 @@ class Box {
   String? message;
   List<From1>? from1;
 
-  Box({this.subImageUrl,    this.from1,   this.id,this.tital,  this.name,  this.email,  this.message});
+  Box(
+      {this.subImageUrl,
+      this.from1,
+      this.id,
+      this.tital,
+      this.name,
+      this.email,
+      this.message});
 
   Box.fromJson(Map<String, dynamic> json)
       : id = json['id'],
@@ -41,8 +48,9 @@ class Box {
         name = json['name'],
         email = json['email'],
         message = json['message'],
-        from1=
-            ((json['from1'] ?? []) as List).map(( dynamic e) => From1.fromJson(e as Map<String, dynamic>)).toList();
+        from1 = ((json['from1'] ?? []) as List)
+            .map((dynamic e) => From1.fromJson(e as Map<String, dynamic>))
+            .toList();
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
@@ -65,7 +73,7 @@ class From1 {
   String? email;
   String? message;
 
-  From1({ this.tital,  this.name,  this.email,  this.message});
+  From1({this.tital, this.name, this.email, this.message});
 
   From1.fromJson(Map<String, dynamic> json)
       : tital = json['tital'],
