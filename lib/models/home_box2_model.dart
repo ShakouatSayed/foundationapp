@@ -1,14 +1,12 @@
 class HomeBox2Model {
-  String? id5;
   String? mainTital;
   String? text;
   List<Box>? box;
 
-  HomeBox2Model({this.id5, this.mainTital,  this.text, this.box});
+  HomeBox2Model({this.mainTital,  this.text, this.box});
 
   HomeBox2Model.fromJson(Map<String, dynamic> json)
-      : id5 = json['id5'],
-        mainTital = json['main_tital'],
+      :mainTital = json['main_tital'],
         text = json['text'] ,
         box = ((json['box'] ?? []) as List)
             .map((e) => Box.fromJson(e))
@@ -16,7 +14,6 @@ class HomeBox2Model {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id5'] = id5;
     data['main_tital'] = mainTital;
     data['text'] = text;
     if (box != null) {
@@ -30,25 +27,28 @@ class Box {
   String? imageUrl;
   String? tital;
   String? text;
-  String? smText;
-  String? raised;
+  String? date;
+  String? time;
+  String? place;
 
-  Box({this.imageUrl, this.tital,  this.text,  this.smText,  this.raised});
+  Box({this.imageUrl, this.tital,  this.text,  this.time,  this.place, this.date});
 
   Box.fromJson(Map<String, dynamic> json)
       : imageUrl = json['image_url'],
         tital = json['tital'],
         text = json['text'],
-        smText = json['sm_text'],
-        raised = json['raised'];
+        date = json['date'],
+        time = json['time'],
+        place = json['place'];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['image_url'] = imageUrl;
     data['tital'] = tital;
     data['text'] = text;
-    data['sm_text'] = smText;
-    data['raised'] = raised;
+    data['date'] = date;
+    data['time'] = time;
+    data['place'] = place;
     return data;
   }
 }

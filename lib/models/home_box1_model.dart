@@ -1,21 +1,18 @@
 class HomeBox1Model {
-  String? id4;
   String? imageUrl;
   String? text;
   List<Box>? box;
 
-  HomeBox1Model({this.id4, this.imageUrl, this.text, this.box});
+  HomeBox1Model({this.imageUrl, this.text, this.box});
 
   HomeBox1Model.fromJson(Map<String, dynamic> json)
-      : id4 = json['id4'],
-        imageUrl = json['image_url'],
+      :imageUrl = json['image_url'],
         text = json['text'],
         box =
             ((json['box'] ?? []) as List).map((e) => Box.fromJson(e)).toList();
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id4'] = id4;
     data['image_url'] = imageUrl;
     data['text'] = text;
     if (box != null) {

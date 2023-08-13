@@ -1,11 +1,10 @@
 {
-    "id1": "box02",
    "main_image_url":"assets/images/beg2.jpg",
    "main_tital":"Blog",
    "box":[
        {
            "image_url":"",
-           "date":"26 July 2022 - August 2022",
+           "date":"26 July 2022",
            "sm_text":"Flood In Bangladesh",
            "tital":"Flood and Moonsoon Rain In Bangladesh",
            "text":"Giving foods for the people's and children which are affected by flood in Bangladesh"

@@ -1,20 +1,17 @@
 class BlogPageBox {
-  String? id1;
   String? mainImageUrl;
   String? mainTital;
   List<Box>? box;
 
-  BlogPageBox({this.id1, this.mainImageUrl,  this.mainTital, this.box});
+  BlogPageBox({this.mainImageUrl,  this.mainTital, this.box});
 
   BlogPageBox.fromJson(Map<String, dynamic> json) :
-        id1 = json['id1'],
         mainImageUrl = json['main_image_url'],
         mainTital = json['main_tital'],
         box = ((json['box']??[])as List).map(( e) => Box.fromJson(e )).toList();
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data["id1"] = id1;
     data['main_image_url'] = mainImageUrl;
     data['main_tital'] = mainTital;
     if (box != null) {

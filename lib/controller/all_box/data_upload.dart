@@ -110,18 +110,17 @@ class DataUpload extends GetxController {
     // print('Item number ${homeBox1Model[3].box}');
     // print('Item number ${homeBox2Model[4].text}');
     // print('Item number ${homeBox3Model[5].box}');
-
     //aboutPageBox
     var batch = fireStore.batch();
     for (var box1 in aboutPageBox) {
-      batch.set(aboutPageBoxRF.doc(box1.id0), {
+      batch.set(aboutPageBoxRF.doc(box1.text), {
         "main_image_url": box1.mainImageUrl,
         "text": box1.text,
         "box_count": box1.box == null ? 0 : box1.box!.length
       });
       for (var boxx in box1.box!) {
         //final boxPath = boxRF(id: box1.id0!, tital: boxx.tital!);
-        final boxPath = aboutPageBoxRF.doc(box1.id0);
+        final boxPath = aboutPageBoxRF.doc(box1.text);
         batch.set(boxPath.collection("box").doc(boxx.tital),
             {"sub_image_url": boxx.subImageUrl, "text1": boxx.text1});
       }
@@ -134,13 +133,13 @@ class DataUpload extends GetxController {
     final fireStore1 = FirebaseFirestore.instance;
     var batch1 = fireStore1.batch();
     for (var box in blogPageBox) {
-      batch1.set(blogPageBoxRF.doc(box.id1), {
+      batch1.set(blogPageBoxRF.doc(box.mainTital), {
         "main_image_url": box.mainImageUrl,
         "main_tital": box.mainTital,
         "box_count": box.box == null ? 0 : box.box!.length
       });
       for (var boxx in box.box!) {
-        final boxPath = blogPageBoxRF.doc(box.id1);
+        final boxPath = blogPageBoxRF.doc(box.mainTital);
         batch1.set(boxPath.collection("box").doc(boxx.tital), {
           "image_url": boxx.imageUrl,
           "date": boxx.date,
@@ -157,7 +156,7 @@ class DataUpload extends GetxController {
     final fireStore2 = FirebaseFirestore.instance;
     var batch2 = fireStore2.batch();
     for (var box2 in gellaryBox) {
-      batch2.set(gallaryPageBoxRF.doc(box2.id3), {
+      batch2.set(gallaryPageBoxRF.doc(box2.tital), {
         "image_url_1": box2.imageUrl1,
         "image_url_2": box2.imageUrl2,
         "image_url_3": box2.imageUrl3,
@@ -177,13 +176,13 @@ class DataUpload extends GetxController {
     final fireStore3 = FirebaseFirestore.instance;
     var batch3 = fireStore3.batch();
     for (var box3 in homeBox1Model) {
-      batch3.set(homeBox1ModelRF.doc(box3.id4), {
+      batch3.set(homeBox1ModelRF.doc(box3.text), {
         "image_url": box3.imageUrl,
         "text": box3.text,
         "box_count": box3.box == null ? 0 : box3.box!.length
       });
       for (var boxx in box3.box!) {
-        final boxPath = homeBox1ModelRF.doc(box3.id4);
+        final boxPath = homeBox1ModelRF.doc(box3.text);
         batch3.set(boxPath.collection("box").doc(boxx.tital),
             {"text1": boxx.text1, "text2": boxx.text2});
       }
@@ -196,18 +195,19 @@ class DataUpload extends GetxController {
     final fireStore4 = FirebaseFirestore.instance;
     var batch4 = fireStore4.batch();
     for (var box4 in homeBox2Model) {
-      batch4.set(homeBox2ModelRF.doc(box4.id5), {
+      batch4.set(homeBox2ModelRF.doc(box4.mainTital), {
         "main_tital": box4.mainTital,
         "text": box4.text,
         "box_count": box4.box == null ? 0 : box4.box!.length
       });
       for (var boxx in box4.box!) {
-        final boxPath = homeBox2ModelRF.doc(box4.id5);
+        final boxPath = homeBox2ModelRF.doc(box4.mainTital);
         batch4.set(boxPath.collection("box").doc(boxx.tital), {
           "image_url": boxx.imageUrl,
           "text": boxx.text,
-          "sm_text": boxx.smText,
-          "raised": boxx.raised
+          "data": boxx.date,
+          "time": boxx.time,
+          "place": boxx.place
         });
       }
     }
@@ -219,19 +219,18 @@ class DataUpload extends GetxController {
     final fireStore5 = FirebaseFirestore.instance;
     var batch5 = fireStore5.batch();
     for (var box5 in homeBox3Model) {
-      batch5.set(homeBox3ModelRF.doc(box5.id6), {
+      batch5.set(homeBox3ModelRF.doc(box5.tital), {
         "image_url": box5.imageUrl,
         "box_count": box5.box == null ? 0 : box5.box!.length
       });
       for (var box in box5.box!) {
-        final boxPath = boxRF(bid: box5.id6!, boxId: box.id!);
+        final boxPath = boxRF(bid: box5.tital!, boxId: box.sub_doc!);
         batch5.set(boxPath, {
-          "id": box.id,
           "sub_image_url": box.subImageUrl,
         });
         for (var from in box.from1!) {
           //final boxPath = boxRF(bid: box5.id6, boxId: boxx.id);
-          batch5.set(boxPath.collection("from1").doc(from.tital), {
+          batch5.set(boxPath.collection("from1").doc(from.name), {
             "name": from.name,
             "email": from.email,
             "message": from.message

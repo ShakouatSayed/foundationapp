@@ -1,5 +1,5 @@
 class GellaryBox {
-  String? id3;
+  String? tital;
   String? imageUrl1;
   String? imageUrl2;
   String? imageUrl3;
@@ -10,7 +10,7 @@ class GellaryBox {
   String? imageUrl8;
 
   GellaryBox(
-      { this.id3,
+      { this.tital,
         this.imageUrl1,
        this.imageUrl2,
        this.imageUrl3,
@@ -21,7 +21,7 @@ class GellaryBox {
        this.imageUrl8});
 
   GellaryBox.fromJson(Map<String, dynamic> json)
-      : id3 = json['id3'],
+      : tital = json['tital'],
         imageUrl1 = json['image_url_1'],
         imageUrl2 = json['image_url_2'],
         imageUrl3 = json['image_url_3'],
@@ -33,7 +33,7 @@ class GellaryBox {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id3'] = id3;
+    data['tital'] = tital;
     data['image_url_1'] = imageUrl1;
     data['image_url_2'] = imageUrl2;
     data['image_url_3'] = imageUrl3;
