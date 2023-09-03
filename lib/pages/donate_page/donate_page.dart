@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foundationapp/base/custom_app_bar.dart';
 import 'package:foundationapp/utils/dimensions.dart';
 import 'package:foundationapp/widget/big_text.dart';
+import 'package:foundationapp/widget/custom_icons.dart';
 import 'package:foundationapp/widget/donate_simple_widget.dart';
 import 'package:foundationapp/widget/donate_widget.dart';
 import 'package:foundationapp/widget/intro_part.dart';
@@ -40,7 +41,7 @@ class _DonatePageState extends State<DonatePage> {
                   child: Column(
                     children: [
                       IntroPage(
-                          image: AssetImage("assets/images/beg4.jpg"),
+                          image: AssetImage("assets/images/begfour.jpg"),
                           text1:
                               "By the grace of Allah these people donate zakat for the Peoples",
                           text: "Donation"),
@@ -66,8 +67,9 @@ class _DonatePageState extends State<DonatePage> {
                         fstBoxText2:
                             "By the grace of Allah these people donate Foundation for the Peoples",
                         donateWidget1: DonateWidget(
-                            image: AssetImage("assets/images/image-10.jpg"),
+                            image: AssetImage("assets/images/imageten.jpg"),
                             name: "Zarin Rosni",
+                            icon: CustomIcons.heart_2,
                             donateTime: "Donated Just now",
                             richText1: "Donated",
                             donateMoney: " \$1000 ",
@@ -75,8 +77,8 @@ class _DonatePageState extends State<DonatePage> {
                             richText2: "For",
                             colors: Colors.blueGrey),
                         donateWidget2: DonateWidget(
-                          image: AssetImage(
-                              "assets/images/p-Abdullah-Al-Matin.jpg"),
+                          image:
+                              AssetImage("assets/images/pabdullahalmatin.jpg"),
                           name: "Abdullah Al Matin",
                           donateTime: "Donated Three days ago",
                           richText1: "Donated",
@@ -85,8 +87,7 @@ class _DonatePageState extends State<DonatePage> {
                           cause: "People Needs Clothes",
                         ),
                         donateWidget3: DonateWidget(
-                            image:
-                                AssetImage("assets/images/p-Sharif-Uddin.jpg"),
+                            image: AssetImage("assets/images/psharifuddin.jpg"),
                             name: "Sharif Uddin",
                             donateTime: "Donated One days ago",
                             richText1: "Donated",

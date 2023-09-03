@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foundationapp/controller/all_box/fundation_image_controller.dart';
 import 'package:foundationapp/widget/app_icon.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +12,7 @@ class FullImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FoundationImageController foundationImageController = Get.find();
     return Scaffold(
       backgroundColor: Colors.grey,
       body: Stack(
@@ -63,7 +65,7 @@ class FullImageView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage("assets/images/event-2.jpg"),
+                      image: AssetImage("assets/images/eventtwo.jpg"),
                     )),
               ))
             ],

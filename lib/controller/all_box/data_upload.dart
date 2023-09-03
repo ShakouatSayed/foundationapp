@@ -74,35 +74,52 @@ class DataUpload extends GetxController {
     List<HomeBox3Model> homeBox3Model = [];
 
     //print in string in
-    for (var box in boxInAssets) {
-      String stringBoxContent = await rootBundle.loadString(box);
-      //print(strinBoxContent);
-      aboutPageBox.add(AboutPageBox.fromJson(json.decode(stringBoxContent)));
-      for (var box1 in boxInAssets1) {
-        String stringBoxContent = await rootBundle.loadString(box1);
-        blogPageBox.add(BlogPageBox.fromJson(json.decode(stringBoxContent)));
-        for (var box2 in boxInAssets2) {
-          String stringBoxContent = await rootBundle.loadString(box2);
-          gellaryBox.add(GellaryBox.fromJson(json.decode(stringBoxContent)));
-          for (var box3 in boxInAssets3) {
-            String stringBoxContent = await rootBundle.loadString(box3);
-            homeBox1Model
-                .add(HomeBox1Model.fromJson(json.decode(stringBoxContent)));
-            for (var box4 in boxInAssets4) {
-              String stringBoxContent = await rootBundle.loadString(box4);
-              homeBox2Model
-                  .add(HomeBox2Model.fromJson(json.decode(stringBoxContent)));
-              for (var box5 in boxInAssets5) {
-                String stringBoxContent = await rootBundle.loadString(box5);
-                //print(stringBoxContent);
-                homeBox3Model
-                    .add(HomeBox3Model.fromJson(json.decode(stringBoxContent)));
-              }
-            }
-          }
-        }
-      }
-    }
+    String stringBoxContent = await rootBundle.loadString(boxInAssets[0]);
+    aboutPageBox.add(AboutPageBox.fromJson(json.decode(stringBoxContent)));
+
+    String stringBoxContent1 = await rootBundle.loadString(boxInAssets1[0]);
+    blogPageBox.add(BlogPageBox.fromJson(json.decode(stringBoxContent1)));
+
+    String stringBoxContent2 = await rootBundle.loadString(boxInAssets2[0]);
+    gellaryBox.add(GellaryBox.fromJson(json.decode(stringBoxContent2)));
+
+    String stringBoxContent3 = await rootBundle.loadString(boxInAssets3[0]);
+    homeBox1Model.add(HomeBox1Model.fromJson(json.decode(stringBoxContent3)));
+
+    String stringBoxContent4 = await rootBundle.loadString(boxInAssets4[0]);
+    homeBox2Model.add(HomeBox2Model.fromJson(json.decode(stringBoxContent4)));
+
+    String stringBoxContent5 = await rootBundle.loadString(boxInAssets5[0]);
+    homeBox3Model.add(HomeBox3Model.fromJson(json.decode(stringBoxContent5)));
+    // for (var box in boxInAssets) {
+    //   String stringBoxContent = await rootBundle.loadString(box);
+    //   //print(strinBoxContent);
+    //   aboutPageBox.add(AboutPageBox.fromJson(json.decode(stringBoxContent)));
+    //   for (var box1 in boxInAssets1) {
+    //     String stringBoxContent = await rootBundle.loadString(box1);
+    //     blogPageBox.add(BlogPageBox.fromJson(json.decode(stringBoxContent)));
+    //     for (var box2 in boxInAssets2) {
+    //       String stringBoxContent = await rootBundle.loadString(box2);
+    //       gellaryBox.add(GellaryBox.fromJson(json.decode(stringBoxContent)));
+    //       for (var box3 in boxInAssets3) {
+    //         String stringBoxContent = await rootBundle.loadString(box3);
+    //         homeBox1Model
+    //             .add(HomeBox1Model.fromJson(json.decode(stringBoxContent)));
+    //         for (var box4 in boxInAssets4) {
+    //           String stringBoxContent = await rootBundle.loadString(box4);
+    //           homeBox2Model
+    //               .add(HomeBox2Model.fromJson(json.decode(stringBoxContent)));
+    //           for (var box5 in boxInAssets5) {
+    //             String stringBoxContent = await rootBundle.loadString(box5);
+    //             //print(stringBoxContent);
+    //             homeBox3Model
+    //                 .add(HomeBox3Model.fromJson(json.decode(stringBoxContent)));
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
 
     // print('Item number ${aboutPageBox[0].box}');
     // print('Item number ${blogPageBox[1].mainImageUrl}');
@@ -110,6 +127,7 @@ class DataUpload extends GetxController {
     // print('Item number ${homeBox1Model[3].box}');
     // print('Item number ${homeBox2Model[4].text}');
     // print('Item number ${homeBox3Model[5].box}');
+
     //aboutPageBox
     var batch = fireStore.batch();
     for (var box1 in aboutPageBox) {
@@ -156,16 +174,9 @@ class DataUpload extends GetxController {
     final fireStore2 = FirebaseFirestore.instance;
     var batch2 = fireStore2.batch();
     for (var box2 in gellaryBox) {
-      batch2.set(gallaryPageBoxRF.doc(box2.tital), {
-        "image_url_1": box2.imageUrl1,
-        "image_url_2": box2.imageUrl2,
-        "image_url_3": box2.imageUrl3,
-        "image_url_4": box2.imageUrl4,
-        "image_url_5": box2.imageUrl5,
-        "image_url_6": box2.imageUrl6,
-        "image_url_7": box2.imageUrl7,
-        "image_url_8": box2.imageUrl8,
-        "box_count": box2.isBlank
+      batch2.set(gallaryPageBoxRF.doc(box2.id), {
+        "tital": box2.tital,
+        "image_url": box2.image_url,
       });
     }
     await batch2.commit();

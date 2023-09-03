@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foundationapp/utils/dimensions.dart';
 import 'package:foundationapp/widget/big_text.dart';
+import 'package:foundationapp/widget/small_text.dart';
 
 class PageIntro extends StatelessWidget {
   final String text;
@@ -26,11 +27,11 @@ class PageIntro extends StatelessWidget {
             size: Dimensions.font26,
             textAlign: TextAlign.center,
           ),
-          BigText(
+          SmallText(
             text: text1,
-            size: Dimensions.font20,
+            size: Dimensions.font16 + 3,
             color: Colors.black,
-          ),
+          )
         ],
       ),
     );

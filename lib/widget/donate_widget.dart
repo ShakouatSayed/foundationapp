@@ -12,6 +12,9 @@ class DonateWidget extends StatelessWidget {
   final String richText2;
   final String cause;
   Color? colors;
+  final IconData? icon;
+  final IconData? icon1;
+
   DonateWidget({
     Key? key,
     required this.image,
@@ -22,6 +25,8 @@ class DonateWidget extends StatelessWidget {
     required this.richText1,
     required this.richText2,
     this.colors = Colors.brown,
+    this.icon,
+    this.icon1,
   }) : super(key: key);
 
   @override
@@ -61,10 +66,23 @@ class DonateWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                BigText(
-                  text: name,
-                  size: Dimensions.font26 + 4,
-                  color: Colors.black,
+                Row(
+                  children: [
+                    //Icon(icon, color: Colors.red),
+
+                    BigText(
+                      text: name,
+                      size: Dimensions.font26 + 4,
+                      color: Colors.black,
+                    ),
+
+                    Icon(
+                      icon,
+                      color: Colors.red,
+                      size: Dimensions.iconSize16 + 2,
+                    ),
+                    //Icon(icon1, color: Colors.red),
+                  ],
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,

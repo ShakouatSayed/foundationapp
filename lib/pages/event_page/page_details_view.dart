@@ -62,7 +62,7 @@ class _PageDetailsViewState extends State<PageDetailsView> {
             expandedHeight: Dimensions.popularFundImgSize - 10,
             backgroundColor: AppColors.mainColor,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset("assets/images/event-2.jpg",
+              background: Image.asset("assets/images/eventtwo.jpg",
                   width: double.maxFinite, fit: BoxFit.fill),
             ),
           ),

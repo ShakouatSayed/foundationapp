@@ -1,14 +1,17 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:foundationapp/bindings/intial_bindings.dart';
-import 'package:foundationapp/data_uploder_screen.dart';
+import 'package:foundationapp/controller/theme_controller.dart';
 import 'package:foundationapp/firebase_options.dart';
 import 'package:foundationapp/routes/app_route_helper.dart';
 import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   InitialBindings().dependencies();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -18,14 +21,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: Get.find<ThemeController>().lightThem,
       debugShowCheckedModeBanner: false,
       getPages: AppRoutes.routes(),
     );
   }
 }
-
-
-
 
 // Future<void> main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -34,4 +35,3 @@ class MyApp extends StatelessWidget {
 //   );
 //   runApp(GetMaterialApp(home: DataUploadScreen()));
 // }
-

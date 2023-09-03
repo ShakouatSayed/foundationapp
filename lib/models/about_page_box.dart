@@ -1,16 +1,26 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class AboutPageBox {
   String? mainImageUrl;
   String? text;
+  int? boxCount;
   List<Box>? box;
 
-  AboutPageBox({this.mainImageUrl, this.text, this.box});
+  AboutPageBox({this.mainImageUrl, this.text, this.box, this.boxCount});
 
   AboutPageBox.fromJson(Map<String, dynamic> json)
-      :mainImageUrl = json['main_image_url'],
+      : mainImageUrl = json['main_image_url'],
         text = json['text'],
+        boxCount = 0,
         box = ((json['box'] ?? []) as List)
             .map((dynamic e) => Box.fromJson(e as Map<String, dynamic>))
             .toList();
+
+  AboutPageBox.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
+      : mainImageUrl = json['main_image_url'],
+        text = json['text'],
+        boxCount = json['box_count'] as int,
+        box = [];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

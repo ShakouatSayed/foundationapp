@@ -1,47 +1,30 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class GellaryBox {
+  String? id;
   String? tital;
-  String? imageUrl1;
-  String? imageUrl2;
-  String? imageUrl3;
-  String? imageUrl4;
-  String? imageUrl5;
-  String? imageUrl6;
-  String? imageUrl7;
-  String? imageUrl8;
+  String? image_url;
 
-  GellaryBox(
-      { this.tital,
-        this.imageUrl1,
-       this.imageUrl2,
-       this.imageUrl3,
-       this.imageUrl4,
-       this.imageUrl5,
-       this.imageUrl6,
-       this.imageUrl7,
-       this.imageUrl8});
-
+  GellaryBox({
+    this.tital,
+    this.image_url,
+    this.id,
+  });
   GellaryBox.fromJson(Map<String, dynamic> json)
-      : tital = json['tital'],
-        imageUrl1 = json['image_url_1'],
-        imageUrl2 = json['image_url_2'],
-        imageUrl3 = json['image_url_3'],
-        imageUrl4 = json['image_url_4'],
-        imageUrl5 = json['image_url_5'],
-        imageUrl6 = json['image_url_6'],
-        imageUrl7 = json['image_url_7'],
-        imageUrl8 = json['image_url_8'];
+      : id = json['id'],
+        tital = json['tital'],
+        image_url = json['image_url'];
+
+  GellaryBox.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
+      : id = json.id,
+        tital = json['tital'],
+        image_url = json['image_url'];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
     data['tital'] = tital;
-    data['image_url_1'] = imageUrl1;
-    data['image_url_2'] = imageUrl2;
-    data['image_url_3'] = imageUrl3;
-    data['image_url_4'] = imageUrl4;
-    data['image_url_5'] = imageUrl5;
-    data['image_url_6'] = imageUrl6;
-    data['image_url_7'] = imageUrl7;
-    data['image_url_8'] = imageUrl8;
+    data['image_url'] = image_url;
     return data;
   }
 }

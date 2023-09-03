@@ -1,7 +1,6 @@
-import 'dart:async';
-import 'package:foundationapp/routes/app_route_helper.dart';
-import 'package:foundationapp/utils/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:foundationapp/config/themes/app_colors.dart';
+import 'package:foundationapp/utils/dimensions.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +17,6 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-
     controller =
         AnimationController(vsync: this, duration: const Duration(seconds: 2))
           ..forward();
@@ -29,29 +27,29 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ScaleTransition(
-              scale: animation,
-              child: Center(
-                child: Image.asset(
-                  "assets/images/panchakanya_fundation_logo_1.jpg",
-                  //height: Dimensions.splashImg,
-                  width: Dimensions.splashImg,
+        backgroundColor: Colors.white,
+        body: Container(
+          decoration: BoxDecoration(gradient: mainGradientColorDark),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ScaleTransition(
+                scale: animation,
+                child: Center(
+                  child: Image.asset(
+                    "assets/images/logo.jpg",
+                    //height: Dimensions.splashImg,
+                    width: Dimensions.splashImg + 5,
+                  ),
                 ),
               ),
-            ),
-            Center(
-              child: Image.asset("assets/images/panchakanya_fundation_logo_2.jpg",
-                  //height: Dimensions.splashImg,
-                  width: Dimensions.splashImg),
-            )
-          ],
-        ),
-      )
-    );
+              Center(
+                child: Image.asset("assets/images/panchakanyafundationlogo.png",
+                    //height: Dimensions.splashImg,
+                    width: Dimensions.splashImg),
+              )
+            ],
+          ),
+        ));
   }
 }

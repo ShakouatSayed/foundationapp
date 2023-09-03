@@ -7,11 +7,12 @@ class SmallText extends StatelessWidget {
   double height;
   TextAlign textAlign;
 
-   SmallText({Key? key,
-  this.color = Colors.limeAccent,
+  SmallText({
+    Key? key,
+    this.color = Colors.limeAccent,
     required this.text,
-     this.textAlign = TextAlign.center,
-    this.size = 12,
+    this.textAlign = TextAlign.center,
+    this.size = 10,
     this.height = 1.2,
   }) : super(key: key);
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foundationapp/base/custom_app_bar.dart';
-import 'package:foundationapp/routes/app_route_helper.dart';
 import 'package:foundationapp/utils/dimensions.dart';
 import 'package:foundationapp/widget/app_column.dart';
 import 'package:foundationapp/widget/app_icon.dart';
@@ -35,7 +34,7 @@ class _BlogPageDetailPageState extends State<BlogPageDetailPage> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage("assets/images/event-2.jpg")),
+                      image: AssetImage("assets/images/eventtwo.jpg")),
                 ),
               )),
           Positioned(
@@ -46,7 +45,7 @@ class _BlogPageDetailPageState extends State<BlogPageDetailPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.offNamed(AppRoutes.getHomePage());
+                      Get.back();
                     },
                     child: AppIcon(icon: Icons.clear),
                   ),

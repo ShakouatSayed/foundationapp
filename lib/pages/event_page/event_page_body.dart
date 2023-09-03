@@ -25,7 +25,7 @@ class _EventPageBodyState extends State<EventPageBody> {
             child: Column(
               children: [
                 IntroPage(
-                  image: AssetImage("assets/images/beg3.jpg"),
+                  image: AssetImage("assets/images/begthree.jpg"),
                   text: "Event",
                   text1: "Flood Relief / Food Security including nutrition for "
                       "children and lactating mothers / Shelter and Tents / "
@@ -63,7 +63,7 @@ class _EventPageBodyState extends State<EventPageBody> {
                                           Radius.circular(Dimensions.radius30)),
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/images/event-2.jpg"),
+                                          "assets/images/eventtwo.jpg"),
                                       fit: BoxFit.fill),
                                 ),
                               ),

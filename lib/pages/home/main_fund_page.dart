@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foundationapp/config/themes/app_colors.dart';
 import 'package:foundationapp/pages/home/fund_page_body.dart';
-import 'package:foundationapp/pages/home/home_page.dart';
 import 'package:foundationapp/utils/colors.dart';
 import 'package:foundationapp/utils/dimensions.dart';
 import 'package:foundationapp/widget/big_text.dart';
@@ -22,6 +22,7 @@ class _MainFundationPageState extends State<MainFundationPage> {
         body: Column(
           children: [
             Container(
+              decoration: BoxDecoration(gradient: mainGradientColorDark),
               //color: Colors.redAccent,
               margin: EdgeInsets.only(
                 top: Dimensions.height45,

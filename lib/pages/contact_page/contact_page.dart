@@ -20,7 +20,8 @@ class _ContactPageState extends State<ContactPage> {
       appBar: CustomAppBar(title: "Contact"),
       body: SingleChildScrollView(
         child: Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(
@@ -31,14 +32,15 @@ class _ContactPageState extends State<ContactPage> {
               child: Center(
                 child: CircleAvatar(
                     radius: 150,
-                    backgroundImage: AssetImage("assets/images/beg6.jpg"),
+                    backgroundImage: AssetImage("assets/images/begsix.jpg"),
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
                         CircleAvatar(
                           radius: 80,
                           backgroundColor: Colors.black,
-                          foregroundImage: AssetImage("assets/images/beg5.jpg"),
+                          foregroundImage:
+                              AssetImage("assets/images/begfive.jpg"),
                         ),
                         Text("Contact Us",
                             style: TextStyle(
@@ -55,73 +57,68 @@ class _ContactPageState extends State<ContactPage> {
                 left: Dimensions.height20,
                 right: Dimensions.height20,
               ),
-              child: Row(
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Contact Information",
-                        style: TextStyle(
-                            fontSize: Dimensions.font26,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: Dimensions.height20),
-                      RichText(
-                          text: TextSpan(children: [
+                  Text(
+                    "Contact Information",
+                    style: TextStyle(
+                        fontSize: Dimensions.font26,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: Dimensions.height20),
+                  RichText(
+                      text: TextSpan(children: [
+                    TextSpan(
+                      text: "Address: ",
+                      style: TextStyle(
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                          fontSize: Dimensions.font26),
+                    ),
+                    TextSpan(
+                      text: "Dhanbari, Tangail, Dhaka, Bangladesh",
+                      style: TextStyle(
+                          color: Colors.black, fontSize: Dimensions.font20 + 1),
+                    )
+                  ])),
+                  SizedBox(height: Dimensions.height20),
+                  RichText(
+                      textAlign: TextAlign.start,
+                      text: TextSpan(children: [
                         TextSpan(
-                          text: "Address: ",
+                          text: "Phone: ",
                           style: TextStyle(
                               color: Colors.green,
                               fontWeight: FontWeight.bold,
                               fontSize: Dimensions.font26),
                         ),
                         TextSpan(
-                          text: "Dhanbari, Tangail, Dhaka, Bangladesh",
+                          text: "+880 1728-782693",
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: Dimensions.font20 + 1),
                         )
                       ])),
-                      SizedBox(height: Dimensions.height20),
-                      RichText(
-                          textAlign: TextAlign.start,
-                          text: TextSpan(children: [
-                            TextSpan(
-                              text: "Phone: ",
-                              style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: Dimensions.font26),
-                            ),
-                            TextSpan(
-                              text: "+880 1728-782693",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: Dimensions.font20 + 1),
-                            )
-                          ])),
-                      SizedBox(height: Dimensions.height20),
-                      RichText(
-                          textAlign: TextAlign.start,
-                          text: TextSpan(children: [
-                            TextSpan(
-                              text: "Email: ",
-                              style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: Dimensions.font26),
-                            ),
-                            TextSpan(
-                              text: "nodi61@gmail.com",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: Dimensions.font20 + 1),
-                            )
-                          ])),
-                    ],
-                  ),
+                  SizedBox(height: Dimensions.height20),
+                  RichText(
+                      textAlign: TextAlign.start,
+                      text: TextSpan(children: [
+                        TextSpan(
+                          text: "Email: ",
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold,
+                              fontSize: Dimensions.font26),
+                        ),
+                        TextSpan(
+                          text: "nodi61@gmail.com",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: Dimensions.font20 + 1),
+                        )
+                      ])),
                 ],
               ),
             ),

@@ -11,76 +11,76 @@ class LastPart extends StatelessWidget {
         right: Dimensions.height10,
         left: Dimensions.height10,
       ),
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Text(
+            "HAVE A QUESTIONS?",
+            style: TextStyle(
+              fontSize: Dimensions.font26,
+              color: Colors.black,
+              decoration: TextDecoration.underline,
+            ),
+          ),
+          SizedBox(height: Dimensions.height20),
+          Row(
             children: [
-              Text(
-                "HAVE A QUESTIONS?",
-                style: TextStyle(
-                  fontSize: Dimensions.font26,
-                  color: Colors.black,
-                  decoration: TextDecoration.underline,
+              Icon(
+                Icons.location_on,
+                color: Colors.green,
+              ),
+              SizedBox(width: Dimensions.height30),
+              Expanded(
+                child: SizedBox(
+                  child: Text(
+                    "Somewhere in Tangail, Dhaka, Bangladesh.",
+                    style: TextStyle(
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
                 ),
+              )
+            ],
+          ),
+          SizedBox(height: Dimensions.height20),
+          Row(
+            children: [
+              Icon(
+                Icons.phone,
+                color: Colors.green,
               ),
-              SizedBox(height: Dimensions.height20),
-              Row(
-                children: [
-                  Icon(
-                    Icons.location_on,
-                    color: Colors.green,
+              SizedBox(width: Dimensions.height30),
+              Expanded(
+                child: SizedBox(
+                  child: Text(
+                    "+880 1608-694048",
+                    style: TextStyle(
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20),
                   ),
-                  SizedBox(width: Dimensions.height30),
-                  SizedBox(
-                    width: 320,
-                    child: Text(
-                      "Somewhere in Tangail, Dhaka, Bangladesh.",
-                      style: TextStyle(
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                  )
-                ],
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: Dimensions.height20),
+          Row(
+            children: [
+              Icon(
+                Icons.mail,
+                color: Colors.green,
               ),
-              SizedBox(height: Dimensions.height20),
-              Row(
-                children: [
-                  Icon(
-                    Icons.phone,
-                    color: Colors.green,
+              SizedBox(width: Dimensions.height30),
+              Expanded(
+                child: SizedBox(
+                  width: 320,
+                  child: Text(
+                    "nodi61@gmail.com",
+                    style: TextStyle(
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20),
                   ),
-                  SizedBox(width: Dimensions.height30),
-                  SizedBox(
-                    width: 320,
-                    child: Text(
-                      "+880 1608-694048",
-                      style: TextStyle(
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(height: Dimensions.height20),
-              Row(
-                children: [
-                  Icon(
-                    Icons.mail,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: Dimensions.height30),
-                  SizedBox(
-                    width: 320,
-                    child: Text(
-                      "nodi61@gmail.com",
-                      style: TextStyle(
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                  )
-                ],
+                ),
               )
             ],
           )

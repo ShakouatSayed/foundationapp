@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foundationapp/controller/all_box/data_upload.dart';
-
 import 'package:foundationapp/firebase_ref/loading_status.dart';
 import 'package:get/get.dart';
 

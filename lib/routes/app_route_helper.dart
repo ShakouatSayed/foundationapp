@@ -1,11 +1,10 @@
-// import 'package:foundationapp/pages/blog_page/blog_page_detail_view.dart';
-// import 'package:foundationapp/pages/donate_page/donate_page.dart';
-// import 'package:foundationapp/pages/event_page/event_page_body.dart';
-// import 'package:foundationapp/pages/event_page/page_details_view.dart';
-// import 'package:foundationapp/pages/gallary_page/full_image_view.dart';
-// import 'package:foundationapp/pages/gallary_page/gallary_page.dart';
-// import 'package:foundationapp/pages/home/home_page.dart';
-// import 'package:foundationapp/pages/splash/splash_screen.dart';
+import 'package:foundationapp/pages/blog_page/blog_page_detail_view.dart';
+import 'package:foundationapp/pages/donate_page/donate_page.dart';
+import 'package:foundationapp/pages/event_page/event_page_body.dart';
+import 'package:foundationapp/pages/event_page/page_details_view.dart';
+import 'package:foundationapp/pages/gallary_page/full_image_view.dart';
+import 'package:foundationapp/pages/gallary_page/gallary_page.dart';
+import 'package:foundationapp/pages/home/home_page.dart';
 import 'package:foundationapp/pages/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -30,18 +29,27 @@ class AppRoutes {
 
   static List<GetPage> routes() => [
         GetPage(name: initail, page: () => SplashScreen()),
-        // GetPage(name: homePage, page: () => HomePage()),
-        // GetPage(name: gallaryPage, page: () => GallaryPage(),transition: Transition.fadeIn),
-        // GetPage(name: fullImageView, page: () => FullImageView(),transition: Transition.fade),
-        // GetPage(
-        //   name: eventPageDetail,
-        //   page: () {
-        //     return PageDetailsView();
-        //   },
-        // ),
-        // GetPage(name: eventPage, page: () => EventPageBody()),
-        // GetPage(name: blogPageDetail, page: () => BlogPageDetailPage()),
-        // GetPage(name: donatePage, page: () => DonatePage()),
+        GetPage(name: homePage, page: () => HomePage()),
+        GetPage(
+            name: gallaryPage,
+            page: () => GallaryPage(),
+            // binding: BindingsBuilder(() {
+            //   Get.lazyPut(() => FoundationImageController());
+            // }),
+            transition: Transition.fadeIn),
+        GetPage(
+            name: fullImageView,
+            page: () => FullImageView(),
+            transition: Transition.fade),
+        GetPage(
+          name: eventPageDetail,
+          page: () {
+            return PageDetailsView();
+          },
+        ),
+        GetPage(name: eventPage, page: () => EventPageBody()),
+        GetPage(name: blogPageDetail, page: () => BlogPageDetailPage()),
+        GetPage(name: donatePage, page: () => DonatePage()),
         //GetPage(name: name, page: page)
       ];
 }

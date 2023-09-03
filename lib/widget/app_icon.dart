@@ -32,7 +32,6 @@
 //   }
 // }
 
-
 import 'package:flutter/material.dart';
 import 'package:foundationapp/utils/dimensions.dart';
 
@@ -42,7 +41,8 @@ class AppIcon extends StatelessWidget {
   final Color iconColour;
   final double size;
   final double iconSize;
-  const AppIcon({Key? key,
+  const AppIcon({
+    Key? key,
     required this.icon,
     this.backgraoundColour = Colors.grey,
     this.iconColour = Colors.white,
@@ -56,7 +56,7 @@ class AppIcon extends StatelessWidget {
       height: size,
       width: size,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(size/2),
+        borderRadius: BorderRadius.circular(size / 2),
         color: backgraoundColour,
       ),
       child: Center(
@@ -69,4 +69,3 @@ class AppIcon extends StatelessWidget {
     );
   }
 }
-

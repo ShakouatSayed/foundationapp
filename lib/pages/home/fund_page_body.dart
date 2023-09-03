@@ -64,7 +64,7 @@ class _FundPageBodyState extends State<FundPageBody> {
         Stack(
           children: [
             IntroPage(
-              image: AssetImage("assets/images/beg2.jpg"),
+              image: AssetImage("assets/images/begtwo.jpg"),
               text: "Donate For Foundation-Flood Relief/Water "
                   "Crisis/Dengue Infection-And Many Others.",
               text1: "Created By: Shakouat Hossen Sayed.",
@@ -127,7 +127,7 @@ class _FundPageBodyState extends State<FundPageBody> {
               color: Colors.lime,
               image: DecorationImage(
                   fit: BoxFit.fill,
-                  image: AssetImage("assets/images/P_F_M.jpeg"),
+                  image: AssetImage("assets/images/pfm.jpg"),
                   opacity: 1.4),
             ),
             child: Column(
@@ -144,7 +144,7 @@ class _FundPageBodyState extends State<FundPageBody> {
                       color: Colors.lime,
                       image: DecorationImage(
                         fit: BoxFit.fill,
-                        image: AssetImage("assets/images/event-2.jpg"),
+                        image: AssetImage("assets/images/eventtwo.jpg"),
                       )),
                 ),
                 SizedBox(height: Dimensions.height10 / 2),
@@ -251,7 +251,7 @@ class _FundPageBodyState extends State<FundPageBody> {
                 color: index.isEven ? Colors.lime : Colors.red,
                 image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/beg5.jpg"))),
+                    image: AssetImage("assets/images/begfive.jpg"))),
           ),
           Align(
             alignment: Alignment.bottomCenter,
